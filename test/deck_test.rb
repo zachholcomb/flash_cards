@@ -13,7 +13,7 @@ class DeckTest < Minitest::Test
   end
 
   def test_it_exists
-    assert_instance_of  Deck, @deck
+    assert_instance_of Deck, @deck
   end
 
   def test_cards_exists
@@ -21,8 +21,8 @@ class DeckTest < Minitest::Test
   end
 
 
-  def test_deck_count_cards
-    assert_equal 3, @deck.count_cards
+  def test_deck_count
+    assert_equal 3, @deck.count
   end
 
   def test_deck_cards_in_category_gegraphy
