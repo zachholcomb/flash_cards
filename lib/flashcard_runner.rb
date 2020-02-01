@@ -11,6 +11,7 @@ card_total = cards.cards.length
 new_deck = Deck.new(cards.cards)
 new_round = Round.new(new_deck)
 
+puts "-------------------------------------------------"
 puts "Welcome! You're playing with #{card_total} cards."
 puts "-------------------------------------------------"
 
