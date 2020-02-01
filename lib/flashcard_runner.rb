@@ -18,7 +18,8 @@ puts "-------------------------------------------------"
 loop do
   if new_round.turns.length == 0
     puts "This card is number 1 out of #{card_total}."
-    puts new_deck.cards.first.question
+    new_round.start
+    puts new_round.current_card.question
     print "> "
     user_guess_input = gets.chomp
     new_turn = Turn.new(user_guess_input, new_deck.cards.first)
