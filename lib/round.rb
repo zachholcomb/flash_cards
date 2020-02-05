@@ -13,9 +13,8 @@ class Round
     @current_card = @deck.cards.first
   end
 
-
   def current_card
-    @current_card = deck.cards.first
+    @current_card = @deck.cards.first
   end
 
   def take_turn(guess)
@@ -49,7 +48,7 @@ class Round
         total_number_category += 1
       end
     end
-    (number_correct_by_category(category).to_f / total_number_category) * 100.0
+    (number_correct_by_category(category).to_f / total_number_category).round(1) * 100.0
   end
 
 end

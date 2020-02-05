@@ -11,5 +11,13 @@ attr_reader :cards
       card = Card.new(line[0], line[1], line[2])
       @cards << card
     end
+
+    def collect_card_categories
+      card_categories = []
+      @cards.each do |card|
+        card_categories << card.category
+      end
+      card_categories.uniq
+    end
   end
 end

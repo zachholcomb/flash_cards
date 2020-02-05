@@ -10,7 +10,7 @@ card_generator = CardGenerator.new(filename)
 new_deck = Deck.new(card_generator.cards)
 card_total = new_deck.count
 new_round = Round.new(new_deck)
-card_categories = ["Geography", "Pop Culture"]
+card_categories = card_generator.collect_card_categories
 
 puts "-------------------------------------------------"
 puts "Welcome! You're playing with #{card_total} cards."
@@ -47,4 +47,4 @@ puts "You had #{new_round.number_correct} out of #{card_total} for a total score
 #{new_round.percent_correct_by_category("Geography")} % correct.
 card_categories.each do |category|
   puts "#{category} - #{new_round.percent_correct_by_category(category)} % correct."
-end 
+end
